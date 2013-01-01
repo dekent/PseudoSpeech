@@ -10,7 +10,7 @@ public class InputReader {
 	public InputReader(String filename)
 	{
 		StringBuilder text = new StringBuilder();
-		String NL = System.getProperty("line.separator");
+		text.append(" ");
 		Scanner scanner;
 		try {
 			scanner = new Scanner(new FileInputStream(filename));
@@ -54,12 +54,5 @@ public class InputReader {
 	public String getInput()
 	{
 		return input;
-	}
-	
-	public static void main(String[] args)
-	{
-		InputReader ir = new InputReader("text/test.txt");
-		ir.formatInput();
-		ir.removeExcessSpace();
 	}
 }
