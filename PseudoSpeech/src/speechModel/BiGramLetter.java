@@ -1,4 +1,4 @@
-package SpeechModel;
+package speechModel;
 
 import java.util.Random;
 
@@ -30,14 +30,6 @@ public class BiGramLetter {
 				prob[i][j] = ((double)freq[i][j]) / c;
 			}
 		}
-		
-		double testCount = 0;
-		for (int i = 0; i < freq.length; i ++)
-		{
-			System.out.println(getChar(i) + "\' : " + prob[i][26]);
-			testCount += prob[i][26];
-		}
-		System.out.println(testCount);
 	}
 	
 	public char nextLetter(char c)

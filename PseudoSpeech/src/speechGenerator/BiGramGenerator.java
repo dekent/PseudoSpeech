@@ -1,9 +1,11 @@
-package SpeechGenerator;
+package speechGenerator;
+
+import input.InputReader;
 
 import java.util.ArrayList;
 
-import Input.InputReader;
-import SpeechModel.BiGramLetter;
+import speechModel.BiGramLetter;
+
 
 public class BiGramGenerator {
 	BiGramLetter model;
@@ -35,14 +37,5 @@ public class BiGramGenerator {
 		}
 		
 		return str;
-	}
-	
-	public static void main(String[] args)
-	{
-		ArrayList<String> files = new ArrayList<String>();
-		files.add("text/SkypeConv.txt");
-		BiGramGenerator bg = new BiGramGenerator(files);
-		
-		System.out.println(bg.generateSpeech(100));
 	}
 }
